@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            -webkit-print-color-adjust: exact;
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            @page { margin: 0; }
+            body { 
+                background-color: white; 
+                margin: 0;
+                padding: 0;
+            }
+            .no-print { display: none !important; }
+            .print-container {
+                box-shadow: none;
+                max-width: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 2.5rem; /* Increased padding for print */
+            }
+            a { text-decoration: none; color: inherit; }
+            /* Ensure page breaks are handled nicely */
+            section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen p-4 md:p-8">
+
+    <!-- Control Bar (No Print) -->
+    <div class="no-print max-w-4xl mx-auto mb-6 flex justify-end">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow transition duration-200 flex items-center gap-2">
+            <i class="fas fa-print"></i> Save as PDF / Print
+        </button>
+    </div>
+
+    <!-- Resume Container -->
+    <div class="print-container bg-white max-w-4xl mx-auto shadow-xl rounded-xl overflow-hidden p-8 md:p-12">
+        
+        <!-- 1. Header -->
+        <section id="header" class="mb-8 border-b pb-8 border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2 text-slate-900">Derek Lu</h1>
+                    <p class="text-xl text-blue-600 font-medium">Gen AI Enthusiast</p>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="flex flex-col gap-2 text-sm text-slate-600">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-envelope w-5 text-center text-blue-500"></i>
+                        <a href="mailto:dereklu123@gmail.com" class="hover:text-blue-600">dereklu123@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-phone w-5 text-center text-blue-500"></i>
+                        <a href="tel:516-580-1230" class="hover:text-blue-600">516-580-1230</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt w-5 text-center text-blue-500"></i>
+                        <span>New York City, New York</span>
+                    </div>
+                    <div class="flex gap-3 mt-1 ml-1">
+                        <a href="https://www.linkedin.com/in/derekblu" class="text-slate-400 hover:text-blue-600 transition"><i class="fab fa-linkedin-in text-lg"></i></a>
+                        <a href="https://github.com/derekklue" class="text-slate-400 hover:text-gray-900 transition"><i class="fab fa-github text-lg"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-sky-500 transition"><i class="fas fa-globe text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Professional Summary -->
+        <section id="summary" class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3 border-b border-gray-100 pb-1">Professional Summary</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Forward-thinking Gen AI Enthusiast and Software Engineer with a robust background in building scalable web applications and integrating artificial intelligence solutions. Skilled in full-stack development, model fine-tuning, and prompt engineering, with a focus on creating intuitive user experiences. Committed to leveraging emerging technologies to drive innovation and optimize business processes in dynamic environments.
+            </p>
+        </section>
+
+        <!-- 3. Skills -->
+        <section id="skills" class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 border-b border-gray-100 pb-1">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+                
+                <!-- Programming & Data -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Programming & Data</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Python (NumPy, Pandas, Scikit-learn)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">R (statistical modeling, regression, data analysis)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">SQL (relational databases, joins, indexing)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Bash / CLI workflows</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Data cleaning, transformation, and validation</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Feature engineering and labeling pipelines</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning & AI -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Machine Learning & AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Supervised learning (linear, logistic, ridge regression)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Classification models (SVM, softmax, generative models)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Neural networks (MLP, CNNs, basic backpropagation)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Convolutional Neural Networks (ResNet, EfficientNet)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Transfer learning and fine-tuning</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Model evaluation, error analysis, and cross-validation</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Ensemble modeling and hybrid architectures</span>
+                    </div>
+                </div>
+
+                <!-- Deep Learning & Computer Vision -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Deep Learning & Computer Vision</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Image classification and dataset construction</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">CNN architecture design and optimization</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Vision Transformers (ViT) conceptual understanding</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Image preprocessing, augmentation, and labeling</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Model training on CPU, GPU, and Apple Silicon (MPS)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">ONNX model export and inference workflows</span>
+                    </div>
+                </div>
+
+                <!-- NLP & Multimodal Systems -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">NLP & Multimodal Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Transformer models (BERT, FinBERT)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Sentiment analysis and text classification</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Multimodal fusion (text + image features)</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Embedding-based similarity and feature extraction</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm font-medium">Working with large text corpora and transcripts</span>
+                    </div>
+                </div>
+
+                <!-- Data Engineering & Systems -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Data Engineering & Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Data pipelines and ETL workflows</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Parquet and CSV data storage</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Time-series data handling (financial data)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">API-based data ingestion (yfinance, web sources)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Dataset versioning and reproducibility</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Database schema design and normalization (BCNF, 3NF)</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML Tooling -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">AI & ML Tooling</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">TensorFlow / Keras</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">PyTorch (conceptual and applied)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Hugging Face Transformers</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Jupyter Notebooks</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Google Gemini (Pro, Image Preview, multimodal workflows)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">NotebookLM for research synthesis</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Agentic AI workflows and prompt engineering</span>
+                    </div>
+                </div>
+
+                <!-- Development & Deployment -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Development & Deployment</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Git & GitHub (project organization, READMEs)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Virtual environments (venv, conda, macOS PEP-668 handling)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Streamlit / lightweight ML demos</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Basic REST and API concepts</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Model inference pipelines</span>
+                    </div>
+                </div>
+
+                <!-- Analytics & Quantitative Skills -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Analytics & Quantitative Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Statistical analysis and hypothesis testing</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Regression and interpolation methods</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Numerical integration and approximation</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Graphical models (Graphical Lasso)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Network analysis (PageRank, covariance graphs)</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Financial data analysis and stock modeling</span>
+                    </div>
+                </div>
+
+                <!-- Domain Knowledge -->
+                <div>
+                    <h3 class="font-semibold text-sm text-slate-900 mb-2">Domain Knowledge</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Financial markets and stock analysis</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Sentiment-driven market prediction</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Cybersecurity fundamentals</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Data governance and ethics</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">Database systems and transactions</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm font-medium">AI safety and model limitations</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Professional Experience -->
+        <section id="experience" class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6 border-b border-gray-100 pb-1">Professional Experience</h2>
+
+            <!-- Job 1 -->
+            <div class="mb-6">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                    <h3 class="text-lg font-bold text-slate-900">Senior Developer</h3>
+                    <span class="text-sm text-gray-500 font-medium">2021 - Present</span>
+                </div>
+                <div class="text-blue-600 font-medium mb-2">Tech Solutions Inc. | New York, NY</div>
+                <ul class="list-disc list-outside ml-4 text-gray-700 space-y-1 text-sm leading-relaxed">
+                    <li>Led a team of 5 developers in redesigning the company's flagship e-commerce platform, resulting in a 40% increase in load speed.</li>
+                    <li>Implemented CI/CD pipelines using GitHub Actions, reducing deployment time by 60%.</li>
+                    <li>Mentored junior developers and conducted code reviews to ensure high code quality standards.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="mb-6">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                    <h3 class="text-lg font-bold text-slate-900">Web Developer</h3>
+                    <span class="text-sm text-gray-500 font-medium">2019 - 2021</span>
+                </div>
+                <div class="text-blue-600 font-medium mb-2">Creative Agency LLC | Austin, TX</div>
+                <ul class="list-disc list-outside ml-4 text-gray-700 space-y-1 text-sm leading-relaxed">
+                    <li>Developed responsive websites for diverse clients using HTML5, CSS3, and JavaScript.</li>
+                    <li>Collaborated with UX/UI designers to translate wireframes into interactive prototypes.</li>
+                    <li>Optimized database queries in MySQL, improving data retrieval efficiency by 25%.</li>
+                </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                    <h3 class="text-lg font-bold text-slate-900">Junior Developer</h3>
+                    <span class="text-sm text-gray-500 font-medium">2018 - 2019</span>
+                </div>
+                <div class="text-blue-600 font-medium mb-2">StartUp Hub | Remote</div>
+                <ul class="list-disc list-outside ml-4 text-gray-700 space-y-1 text-sm leading-relaxed">
+                    <li>Assisted in the backend development of a SaaS product using Node.js and Express.</li>
+                    <li>Wrote unit tests and integration tests to ensure software reliability.</li>
+                    <li>Maintained documentation for API endpoints and system architecture.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. Projects & Research -->
+        <section id="projects" class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 border-b border-gray-100 pb-1">Projects & Research</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-gray-50 rounded p-5 border border-gray-100">
+                    <h3 class="font-bold text-slate-900 mb-2 text-sm">Multimodal Stock Movement Prediction System</h3>
+                    <ul class="list-disc list-outside ml-3 text-xs text-gray-700 space-y-1.5 leading-relaxed">
+                        <li>Designed an end-to-end machine learning pipeline combining candlestick image classification (CNNs) with financial sentiment analysis (FinBERT) to predict short-term stock movement.</li>
+                        <li>Trained and evaluated ResNet and EfficientNet models on labeled candlestick chart images, achieving meaningful accuracy improvements through transfer learning.</li>
+                        <li>Integrated NLP sentiment features (positive, neutral, negative) with visual signals to form a hybrid multimodal prediction framework.</li>
+                        <li>Implemented data ingestion using financial APIs, engineered features, and structured datasets using Parquet-based data lakes.</li>
+                        <li>Evaluated model performance using accuracy, precision-recall, and robustness across market conditions.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 rounded p-5 border border-gray-100">
+                    <h3 class="font-bold text-slate-900 mb-2 text-sm">Large-Scale Image Dataset Construction for Computer Vision</h3>
+                    <ul class="list-disc list-outside ml-3 text-xs text-gray-700 space-y-1.5 leading-relaxed">
+                        <li>Collected and curated 6,000+ self-shot images across multiple real-world conditions for a custom computer vision dataset.</li>
+                        <li>Designed a structured labeling schema with balanced classes, controlled conditions, and domain-specific categories.</li>
+                        <li>Applied preprocessing, augmentation, and quality control pipelines to ensure dataset consistency.</li>
+                        <li>Trained CNN classifiers using EfficientNet and ResNet architectures and evaluated generalization under challenging visual conditions.</li>
+                        <li>Exported trained models to ONNX for lightweight inference and deployment.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 rounded p-5 border border-gray-100 md:col-span-2">
+                    <h3 class="font-bold text-slate-900 mb-2 text-sm">Graphical Lasso and Network Analysis on Financial Markets</h3>
+                    <ul class="list-disc list-outside ml-3 text-xs text-gray-700 space-y-1.5 leading-relaxed">
+                        <li>Analyzed covariance and dependency structures across 30 major stocks (2018–2023) using Graphical Lasso.</li>
+                        <li>Investigated pre- and post-COVID market structure changes through precision matrix comparisons.</li>
+                        <li>Applied PageRank to identify influential stocks within inferred financial networks.</li>
+                        <li>Studied persistent edges and stability of relationships over time.</li>
+                        <li>Presented findings through network visualizations and statistical summaries.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Education -->
+        <section id="education" class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 border-b border-gray-100 pb-1">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-bold text-slate-900">Masters, Data Science and Applications MPS</h3>
+                    <p class="text-blue-600 text-sm font-medium">University at Buffalo – The State University of New York</p>
+                    <p class="text-gray-500 text-sm italic">Aug. 2025</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Bachelor of Science, Business Administration</h3>
+                    <p class="text-blue-600 text-sm font-medium">University at Buffalo – The State University of New York</p>
+                    <p class="text-gray-700 text-sm mt-0.5">Management Information Systems, GPA: 3.2</p>
+                    <p class="text-gray-500 text-sm italic">Jun. 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Other -->
+        <section id="other">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 border-b border-gray-100 pb-1">Other</h2>
+            <div>
+                <h3 class="font-semibold text-sm text-slate-900 mb-2">Technical Highlights</h3>
+                <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                    <li>Built end-to-end ML pipelines from data ingestion to model evaluation</li>
+                    <li>Experience combining CNN-based vision models with transformer-based NLP</li>
+                    <li>Strong focus on reproducible experiments and clean data design</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        window.addEventListener('beforeprint', () => {
+             // Print preparation
+        });
+    </script>
+</body>
+</html>
